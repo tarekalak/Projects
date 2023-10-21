@@ -152,7 +152,7 @@ section{
     text-align: center;
     margin-top: var(--size-double);
     padding: var(--padding-primary);
-    transition: all .15s ease-in;
+    transition: all .2s ease-in;
 }
 
 
