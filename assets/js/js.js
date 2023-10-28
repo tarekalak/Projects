@@ -36,3 +36,18 @@ $('.video-control-play').click(function(){
 $('.video-control-pause').click(function(){
     videoToggle();
 })
+function over(){
+    document.getElementById('input1').style.backgroundColor='rgba(13, 141, 70, 0.568)';
+}
+function out(){
+    document.getElementById('input1').style.backgroundColor='#f4f4f4';
+}
+
+// function click(let message){
+//     document.getElementById('btn').alert(message);
+// function dblclick(let message){
+//     document.getElementById('btn').alert(message);
+// }
+// Used within the html page to diversify the methods 
+//للتنويع في الطرق html استخدمت ضمن صفحة
+document.getElementsByClassName('.e').backgroundColor='red';

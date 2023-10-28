@@ -248,26 +248,26 @@
     
     <div class="container">
         <form action="" class="contact-form">
-        <div class="form-group">
-            <input type="text" name="" id="" class="form-control" required placeholder="Name">
+        <div class="form-group" onmouseover="over()" onmouseout="out()" >
+            <input type="text" name="" id="input1" class="form-control" placeholder="Name" > 
             <i class="fa fa-user"></i>
         </div>
         
         <div class="form-group">
-            <input type="text" name="" id="" class="form-control" required placeholder="Email">
+            <input type="text" name="" id="input2" class="form-control" placeholder="Email">
             <i class="fa fa-envelope"></i>
         </div>
         
         <div class="form-group">
-            <input type="text" name="" id="" class="form-control" required placeholder="Subject">
+            <input type="text" name="" id="input3" class="form-control" placeholder="Subject">
             <i class="fa fa-book"></i>
         </div>
         
         <div class="form-group">
-            <textarea type="text" name="" id="" class="form-control" required placeholder="Message" rows="9" ></textarea>
+            <textarea type="text" name="" id="input4" class="form-control" placeholder="Message" rows="9" ></textarea>
             <i class="fa fa-commenting"></i>
         </div>
-        <button type="submit" class="btn btn-primary">send Message now</button>
+        <button type="submit" class="btn btn-primary" id="btn" onclick="alert('Double-click')" ondblclick="alert('Message sent')">send Message now</button>
     </form>
     </div>
 </section>
