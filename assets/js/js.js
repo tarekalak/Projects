@@ -1,3 +1,14 @@
+let up=document.querySelector('.up');
+window.onscroll=function(){
+    // console.log(this.scrollY);
+    if(this.scrollY>=580){
+        up.classList.add('show');
+    }
+    else{
+        up.classList.remove('show');
+    }
+}
+
 $( function() {
     $( "#inputCheckIn" ).datepicker();
     $( "#inputCheckOut" ).datepicker();
@@ -50,4 +61,3 @@ function out(){
 // }
 // Used within the html page to diversify the methods 
 //للتنويع في الطرق html استخدمت ضمن صفحة
-document.getElementsByClassName('.e').backgroundColor='red';

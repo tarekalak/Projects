@@ -25,6 +25,17 @@
 
 --height-primary: 120px ;
 }
+
+.up{
+    position: fixed;
+    bottom: 12px;
+    right: -50px;
+    transition: 0.2s;
+}
+.up.show{
+    right: 13px;
+}
+
 a{
     color: inherit;
     text-decoration: none;
@@ -74,6 +85,11 @@ color: white;
     gap: var(--size-half);
     padding: var(--padding-primary)var(--padding-double);
     
+}
+@media (max-width: 768px) {
+    .search-form{
+        display: block;
+    }
 }
 
 .form-group{
@@ -165,9 +181,7 @@ section{
     font-size: 4rem;
     margin-bottom: var(--size-primary);
 }
-.btn-fit{
-    width: max-content;
-}
+
 
 /* SLIDER */
 

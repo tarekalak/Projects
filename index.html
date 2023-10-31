@@ -16,8 +16,10 @@
 
 </head>
 <body>
+   
+   
  <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light" id="nav">
         <div class="container">
         <a class="navbar-brand" href="#">
             <i class="fa fa-cogs"></i>
@@ -29,15 +31,26 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item active">
-              <a class="level-nav-link nav-link active" href="#hero" style="background-color: var(--color-primary); color: white;">Home </a>
+              <a class="level-nav-link nav-link active" href="#hero" style="background-color: var(--color-primary); color: white;" data-tran="home">Home </a>
             </li>
             <li class="nav-item">
-              <a class="level-nav-link nav-link" href="#front-end">Front-End</a>
+              <a class="level-nav-link nav-link" href="#front-end" data-tran="front">Front-End</a>
             </li>
             <li class="nav-item">
-              <a class="level-nav-link nav-link" href="#back-end">Back-End</a>
+              <a class="level-nav-link nav-link" href="#back-end" data-tran="back">Back-End</a>
             </li>
-            
+            <li class="nav-item dropdown">
+                <select class="level-nav-link nav-link dropdown-toggle" id="tran" >
+                   
+                
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <option value="" data-tran="lang" selected>language</option>
+                  <option  style="height: 5px;" value="en">English</option>
+                  <option  style="height: 5px;" value="ar">العربية</option>
+                </div>
+            </select>
+              </li>
+        
           </ul>
         </div>
     </div>
@@ -51,29 +64,29 @@
         <form action="index.html" method="get" class="search-form">
             <div class="form-group" style="flex: 100%;">
                 <i class="fa fa-map-marker"></i>
-                <input type="text" name="city" class="form-control"  placeholder="Programming Companies...">
+                <input type="text" name="city" class="form-control"  placeholder="Programming Companies..." data-tran="companies">
             </div>
             <div class="form-group" >
                 <i class="fa fa-calendar"></i>
-                <input type="text" class="form-control" id="inputCheckIn" placeholder="When work started">
+                <input type="text" class="form-control" id="inputCheckIn"  data-tran="start" placeholder="When work started">
             </div>
             <div class="form-group" >
                 <i class="fa fa-calendar"></i>
-                <input type="text" class="form-control" id="inputCheckOut" placeholder="End time of work">
+                <input type="text" class="form-control" id="inputCheckOut" placeholder="End time of work" data-tran="end">
             </div>
             <div class="form-group">
                 <i class="fa fa-cogs"></i>
                 <select class="form-control">
-                    <option value="**">work</option>
-                    <option value="Rooms 1">front-end</option>
-                    <option value="Rooms 2">back-end</option>
-                    <option value="Rooms 3">data base</option>
+                    <option value="**" data-tran="work">work</option>
+                    <option value="Rooms 1" data-tran="front">front-end</option>
+                    <option value="Rooms 2" data-tran="back">back-end</option>
+                    <option value="Rooms 3" data-tran="dataBase">data base</option>
                 </select>
             </div>
             <div class="form-group">
                 <i  class="fa fa-user"></i>
                 <select class="form-control">
-                  <option value="**">Staff</option>
+                  <option value="**" data-tran="staff">Staff</option>
                   <option value=" 1">1</option>
                   <option value=" 2">2</option>
                   <option value=" 3">3</option>
@@ -84,7 +97,7 @@
             <div class="form-group">
                 <i  class="fa fa-user"></i>
                 <select class="form-control">
-                  <option value="**">HR</option>
+                  <option value="**" data-tran="HR">HR</option>
                   <option value=" 1">1</option>
                   <option value=" 2">2</option>
                   <option value=" 3">3</option>
@@ -92,14 +105,14 @@
                 </select>
             </div>
             
-                <div class="form-group"><button type="submit" class="btn btn-primary">add</button>
+                <div class="form-group"><button type="submit" class="btn btn-primary" data-tran="add">add</button>
             </div>
            
         </form>
 
 
-        <p class="need-help">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem.
-            <a href="#"> Need Help</a>
+        <p class="need-help" data-tran="help">we are here to help you.
+            <a href="#" data-tran="needHelp"> Need Help</a>
         </p>
     </div>
 </div>
@@ -108,9 +121,9 @@
 <!-- SUBSCRIBE -->
 <section class="section-color">
     <div class="contener text-center">
-        <h2 class="section-title">Do you want to be a programmer?</h2>
-        <p class="section-subtitle">Subscribe to get help </p>
-        <a href="#" class="btn btn-white">Subscribe </a>
+        <h2 class="section-title" data-tran="beProgrammer">Do you want to be a programmer?</h2>
+        <p class="section-subtitle" data-tran="subscribeToHelp">Subscribe to get help </p>
+        <a href="#" class="btn btn-white" data-tran="Subscribe">Subscribe </a>
     </div>
 </section>
 
@@ -123,26 +136,25 @@
     <div class="container">
         <div class="row">
 
-            <article class="article col-lg-4">
+            <article class="article col-sm-4">
                 <i class="fa fa-code article-icon"></i>
                 <h3 class="article-title">HTML </h3>
-                <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It defines the meaning and structure of web content.</p>
-                <a href="https://en.wikipedia.org/wiki/HTML" class="btn btn-primary btn-fit">continue reading</a>
+                <p data-tran="html">The HyperText Markup Language or HTML . it's build page wab</p>
+                <a href="https://en.wikipedia.org/wiki/HTML" class="btn btn-primary " data-tran="btncontinue">continue reading</a>
             </article>
 
-            <article class="article col-lg-4">
+            <article class="article col-sm-4">
                 <i class="fa fa-css3 article-icon "></i>
                 <h3 class="article-title">CSS </h3>
-                <p>"Cascading Style Sheets" and "Pseudo-element" redirect here. For pseudoelement symbols in chemistry</p>
-                <a href="https://en.wikipedia.org/wiki/CSS" class="btn btn-primary btn-fit">continue reading</a>
+                <p data-tran="css">"Cascading Style Sheets" and "Pseudo-element" redirect here. </p>
+                <a href="https://en.wikipedia.org/wiki/CSS" class="btn btn-primary " data-tran="btncontinue">continue reading</a>
             </article>
 
-            <article class="article col-lg-4">
+            <article class="article col-sm-4">
                 <i class="fa fa-cogs article-icon"></i>
                 <h3 class="article-title">JavaScript </h3>
-                <p>Not to be confused with Java (programming language), Javanese script, or ECMAScript.
-                    ".js" redirects here. For the Microsoft dialect used in Internet Explorer</p>
-                <a href="https://en.wikipedia.org/wiki/JavaScript" class="btn btn-primary btn-fit">continue reading</a>
+                <p data-tran="js">Not to be confused with Java (programming language)</p>
+                <a href="https://en.wikipedia.org/wiki/JavaScript" class="btn btn-primary " data-tran="btncontinue">continue reading</a>
             </article>
         </div>
     </div>
@@ -159,10 +171,10 @@
                     <img src="img/laravel.jpg" alt="">
                     <div class="level-slider-item-container">
                         <h3>PHP-Laravel</h3>
-                        <p>Laravel is a free and open-source PHP web framework created by Taylor Otwell and intended for the development of web applications following the model–view–controller (MVC) architectural pattern and based on Symfony. Some of the features of Laravel are a modular packaging system with a dedicated dependency manager, different ways for accessing relational databases, utilities that aid in application deployment and maintenance, and its orientation toward syntactic sugar.
+                        <p data-tran="Laraveldetails">Laravel is a free and open-source PHP web framework created by Taylor Otwell and intended for the development of web applications following the model–view–controller (MVC) architectural pattern and based on Symfony. Some of the features of Laravel are a modular packaging system with a dedicated dependency manager, different ways for accessing relational databases, utilities that aid in application deployment and maintenance, and its orientation toward syntactic sugar.
 
                             The source code of Laravel is hosted on GitHub and licensed under the terms of MIT License.</p>
-                        <a href="https://en.wikipedia.org/wiki/Laravel" class="btn btn-primary btn-fit">mor info</a>
+                        <a  data-tran="btncontinue" href="https://en.wikipedia.org/wiki/Laravel" class="btn btn-primary btn-fit">continue reading</a>
                     </div>
                 </articale>
 
@@ -170,8 +182,8 @@
                     <img src="img/Nodejs.jpg" alt="">
                     <div class="level-slider-item-container">
                         <h3>Node.js</h3>
-                        <p>Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of project!</p>
-                        <a href="https://en.wikipedia.org/wiki/Node.js" class="btn btn-primary btn-fit">view detales</a>
+                        <p data-tran="nodejs">Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of project!</p>
+                        <a  data-tran="btncontinue" href="https://en.wikipedia.org/wiki/Node.js" class="btn btn-primary btn-fit">continue reading</a>
                     </div>
                 </articale>
 
@@ -179,9 +191,9 @@
                     <img src="img/django.jpg" alt="">
                     <div class="level-slider-item-container">
                         <h3>Python-Djengo</h3>
-                        <p>Django is a free and open-source, Python-based web framework that follows the model–template–views (MTV) architectural pattern. It is maintained by the Django Software Foundation (DSF), an independent organization established in the US as a non-profit.
+                        <p data-tran="django">Django is a free and open-source, Python-based web framework that follows the model–template–views (MTV) architectural pattern. It is maintained by the Django Software Foundation (DSF), an independent organization established in the US as a non-profit.
                         </p>
-                        <a href="https://en.wikipedia.org/wiki/Django_(web_framework)" class="btn btn-primary btn-fit">more info</a>
+                        <a  data-tran="btncontinue" href="https://en.wikipedia.org/wiki/Django_(web_framework)" class="btn btn-primary btn-fit">continue reading</a>
                     </div>
                 </articale>
 
@@ -189,8 +201,8 @@
                     <img src="img/NET.jpg" alt="">
                     <div class="level-slider-item-container">
                         <h3>C#-ASP.NET</h3>
-                        <p>ASP and ASP.NET are server side technologies. Both technologies enable computer code to be executed by an Internet server. When a browser requests an ASP or ASP.NET file, the ASP engine reads the file, executes any code in the file, and returns the result to the browser.</p>
-                        <a href="https://en.wikipedia.org/wiki/ASP.NET" class="btn btn-primary btn-fit">view detales</a>
+                        <p data-tran="ASPNET">ASP and ASP.NET are server side technologies. Both technologies enable computer code to be executed by an Internet server. When a browser requests an ASP or ASP.NET file, the ASP engine reads the file, executes any code in the file, and returns the result to the browser.</p>
+                        <a  data-tran="btncontinue" href="https://en.wikipedia.org/wiki/ASP.NET" class="btn btn-primary btn-fit">continue reading</a>
                     </div>
                 </articale>
 
@@ -200,24 +212,24 @@
 
         <div class="col-lg-4 start-places">
             <div class="start-places-header">
-                <h3>Laravel Framework</h3>
-                <p>Some of arabic channels for teaching the Laravel framework</p>
+                <h3 data-tran="laravel">Laravel Framework</h3>
+                <p data-tran="channels">Some of arabic channels for teaching the Laravel framework</p>
             </div>
             <div class="start-places-body">
          
                 <a href="https://youtu.be/f6uQfOw2_6o?si=Lf2rO85OfoVdFDaM">
                     <img src="https://yt3.googleusercontent.com/ytc/APkrFKZkD7j71GDCGBf9mR8vqHGtX3LaCjGPavqR--85qw=s176-c-k-c0x00ffffff-no-rj">
-                    <h4>Nour Homsi</h4>
+                    <h4  data-tran="nourHomsi">Nour Homsi</h4>
                 </a>
 
                 <a href="https://www.youtube.com/watch?v=bXjRQM_VK_I&list=PLDoPjvoNmBAy_mAhY0x8cHf8oSGPKsEKP">
                     <img src="https://yt3.ggpht.com/-qCvx3y42iXp9cMNe5Yx3aoR2lL8TFxsrLShyBLuXOE4tY56kt_bPceyvPw95rpUqgKqI8zDBe4=s176-c-k-c0x00ffffff-no-rj-mo" alt="place image">
-                    <h4>elzero web school</h4>
+                    <h4  data-tran="elzero">elzero web school</h4>
                 </a>
 
                 <a href="https://www.youtube.com/watch?v=UAbH4bkyHBI&list=PLftLUHfDSiZ4GfPZxaFDsA7ejUzD7SpWa">
                     <img src="https://yt3.ggpht.com/84mt-UaA05dXU_DXuO4ZHJYznuJLKnR8hYp7ONAV3l41hnrP3cJA4vQMDyKlkUrsuGBODBNqPw=s176-c-k-c0x00ffffff-no-rj-mo" alt="place image">
-                    <h4>Mora Soft</h4>
+                    <h4  data-tran="mora">Mora Soft</h4>
                 </a>
 
             </div>
@@ -236,7 +248,7 @@
     </div>
     <div class="video-container">
         <video class="level-video" muted poster="img/programminglanguages.png">
-            <source src="video/video_2023-10-16_15-17-50.mp4">
+            <source src="video/video_2023-10-16_15-17-50.mp4" data-tran="videoError">
             your browser does not support this video tag.
         </video>
     </div>
@@ -267,7 +279,7 @@
             <textarea type="text" name="" id="input4" class="form-control" placeholder="Message" rows="9" ></textarea>
             <i class="fa fa-commenting"></i>
         </div>
-        <button type="submit" class="btn btn-primary" id="btn" onclick="alert('Double-click')" ondblclick="alert('Message sent')">send Message now</button>
+        <button type="submit" class="btn btn-primary" id="btn" onclick="alert('Double-click')" ondblclick="alert('Message sent')"  data-tran="btnSend">send Message now</button>
     </form>
     </div>
 </section>
@@ -281,13 +293,16 @@
     </div>
 </footer>
 
+<a class="btn btn-success up " href="#nav"><i class="fa fa-arrow-up"></i></a>
 
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> 
+<script src="assets/js/Translation.js"></script>
     <script src="assets/js/js.js"></script>
 </body>
 </html>
